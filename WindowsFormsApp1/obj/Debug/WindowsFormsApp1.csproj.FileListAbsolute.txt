@@ -1,0 +1,10 @@
+D:\ErmesConnector\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\ErmesConnector\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\ErmesConnector\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\ErmesConnector\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb

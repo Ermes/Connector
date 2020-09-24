@@ -1,0 +1,12 @@
+D:\ErmesConnector\WindowsFormsApp1\bin\x86\Debug\WindowsFormsApp1.exe.config
+D:\ErmesConnector\WindowsFormsApp1\bin\x86\Debug\WindowsFormsApp1.exe
+D:\ErmesConnector\WindowsFormsApp1\bin\x86\Debug\WindowsFormsApp1.pdb
+D:\ErmesConnector\WindowsFormsApp1\bin\x86\Debug\F4SharedMem_3.1.1.dll
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.Form1.resources
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.exe
+D:\ErmesConnector\WindowsFormsApp1\obj\x86\Debug\WindowsFormsApp1.pdb
