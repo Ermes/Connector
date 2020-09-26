@@ -4,8 +4,11 @@ using System.Collections;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO.Ports;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using System.Windows.Forms;
 
 namespace ErmesConn
 {
@@ -109,7 +112,7 @@ namespace ErmesConn
                         arduino.Write('G'.ToString());
                         sendBytes(arduino, blankByte, 1);
                         arduino.DiscardOutBuffer();
-                        Debug.Print("Envio G ");
+                        // Debug.Print("Envio G ");
                         break; // exit the interrupt 
                         
                     case 'M':
@@ -140,14 +143,26 @@ namespace ErmesConn
                     case 'P':
                         #region Pulsacion
                         //blankByte[0] = (byte)0;
-                        char[] pulsacion = new char[1];
-                        arduino.Read(pulsacion,0,1);
-                        Debug.Print(pulsacion[0].ToString());
+                        byte[] pulsacion = new byte[2];
+                        arduino.Read(pulsacion,0,2);
+                        Pulsacion(pulsacion[0]);
                         break;
                         #endregion
                 }
                 #endregion                
             }                       
+        }
+
+        public void Pulsacion(uint pulsaciones)
+        {
+            uint alt_rel = 0b_01000000;
+            uint resultado = pulsaciones & alt_rel;
+            if ( resultado > 0 )
+            {
+                if(ActivateApp("notepad"))
+                    SendKeys.SendWait(pulsaciones.ToString());
+            }
+            
         }
 
         public void FalconUpdate()
@@ -174,7 +189,6 @@ namespace ErmesConn
 
             byte[] result = new byte[1];
             mapping.CopyTo(result, 0);
-            Debug.Print(result[0].ToString());
             return result;
         }
 
@@ -203,5 +217,24 @@ namespace ErmesConn
         }
 
 
+        [DllImport("user32.dll")]
+        static extern bool SetForegroundWindow(IntPtr hWnd);
+
+        private bool ActivateApp(string processName)
+        {
+            Process[] todos = Process.GetProcesses();
+            Process[] p = Process.GetProcessesByName(processName);
+            bool encontrado = false;
+            // Activate the first application we find with this name
+            if (p.Count() > 0)
+            {
+                SetForegroundWindow(p[0].MainWindowHandle);
+                encontrado = true;
+            } else
+            {
+                encontrado = false;
+            }
+            return encontrado;   
+        }
     }
 }
